@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\About;
+use App\Http\Controllers\GameList;
+use App\Http\Controllers\News;
+use App\Http\Controllers\Order;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('index');
+    return view('main_content');
 });
+
+Route::get('/main', [GameList::class, 'getAllGames'])->name('main');
+Route::get('/about', [About::class, 'getAboutUs'])->name('about');
+Route::get('/news', [News::class, 'getNews'])->name('news');
+Route::get('/orders', [Order::class, 'getMyOrders'])->name('news');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

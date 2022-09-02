@@ -6,8 +6,8 @@
 5. Открыть phpMyAdmin: http://localhost:8080
 6. Выполнить миграции (внутри контейнера fpm): docker exec -it <container name\id> php artisan migrate
 
-# Если возникли проблемы с правами:
-1. sudo chmod -R 777 storage/logs
+# Если возникли проблемы с правами, выполнить локально:
+1. sudo chmod -R 775 storage/logs
 2. sudo chmod -R gu+w storage
 3. sudo chmod -R guo+w storage
 
@@ -15,5 +15,7 @@
 - npm run dev
 
 # Очистка кэша:
-- php artisan optimize:clear
+- php artisan cache:clear
+- php artisan route:clear
+- php artisan view:clear
 
