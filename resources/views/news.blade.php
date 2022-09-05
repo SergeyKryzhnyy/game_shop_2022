@@ -19,7 +19,7 @@
                 <h3 class="content-text__title">
                   «Как живут обычные люди в Deus Ex: Mankind Divided. А не пора
                   ли событиям Deus Ex: Mankind Divided случиться в реальности?»
-                </h3><img src="resources/img/cover/game-3.jpg" alt="Image" class="alignleft img-news">
+                </h3><img src="{{asset('img/cover/game-3.jpg')}}" alt="Image" class="alignleft img-news">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

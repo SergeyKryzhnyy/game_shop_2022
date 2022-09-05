@@ -1,6 +1,6 @@
 @section('header')
     <header class="main-header">
-    <div class="logotype-container"><a href="/main" class="logotype-link"><img src={{asset('resources/img/logo.png')}} alt="Логотип"></a></div>
+    <div class="logotype-container"><a href="/main" class="logotype-link"><img src={{asset('img/logo.png')}} alt="Логотип"></a></div>
     <nav class="main-navigation">
         <ul class="nav-list">
             <li class="nav-list__item"><a href="/main" class="nav-list__item__link">Главная</a></li>
@@ -19,6 +19,15 @@
                 <div class="payment-basket__status__basket"><span class="payment-basket__status__basket-value">0</span><span class="payment-basket__status__basket-value-descr">товаров</span></div>
             </div>
         </div>
-        <div class="authorization-block"><a href="#" class="authorization-block__link">Регистрация</a><a href="#" class="authorization-block__link">Войти</a></div>
+        <div class="authorization-block">
+                @if (\Illuminate\Support\Facades\Auth::check())
+                <a href="#" class="authorization-block__link">{{Illuminate\Support\Facades\Auth::user()->name}}</a>
+                    <a href="{{route('logout')}}" class="authorization-block__link">Выйти</a>
+                @else
+                    <a href="{{route('register')}}" class="authorization-block__link">Регистрация</a>
+                    <a href="{{route('login')}}" class="authorization-block__link">Войти</a>
+                @endif
+
+        </div>
     </div>
 </header>

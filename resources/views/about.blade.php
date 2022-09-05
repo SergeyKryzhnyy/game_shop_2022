@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="content-main__container">
-                <div class="news-block content-text"><img src="resources/img/cover/game-3.jpg" alt="Image" class="alignleft img-news">
+                <div class="news-block content-text"><img src="{{asset('img/cover/game-3.jpg')}}" alt="Image" class="alignleft img-news">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
