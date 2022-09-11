@@ -33,8 +33,9 @@ Route::view('login', 'auth.login')->name('login');
 Route::view('register', 'auth.register')->name('register');
 
 
-
-
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
