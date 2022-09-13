@@ -15,7 +15,9 @@
 - npm run dev
 
 # Очистка кэша:
-- php artisan cache:clear
-- php artisan route:clear
-- php artisan view:clear
+php artisan cache:clear 
+php artisan route:clear
+php artisan view:clear
 
+установка voyyager:
+https://delphinpro.gitbook.io/voyager-ru/getting-started/installation

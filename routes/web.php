@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\About;
+use App\Http\Controllers\Game;
 use App\Http\Controllers\GameList;
 use App\Http\Controllers\News;
 use App\Http\Controllers\Order;
@@ -37,6 +38,8 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('/creategame', [Game::class, 'CreateGame'])->name('creategame');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -44,6 +47,4 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 //
-//Route::group(['prefix' => 'admin'], function () {
-//    Voyager::routes();
-//});
+

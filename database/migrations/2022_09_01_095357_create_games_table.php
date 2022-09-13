@@ -19,6 +19,7 @@ class CreateGamesTable extends Migration
             $table->enum('category',['Action', 'RPG', 'Strategy', 'Simulator', 'Sport', 'Racing', 'Stealth']);
             $table->integer('price');
             $table->text('description');
+            $table->text('image');
             $table->timestamps();
         });
     }
